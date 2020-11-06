@@ -1,1 +1,8 @@
-Código de la paleta de colores
+Paleta de Colores:
+#ffffff - Background principal
+#ffd24f - Botones
+#1e1e1e - Color texto, header, footer
+#e8e8e8 - Background secundario
+
+Fuente:
+Montserrat - Medium 500 (Nav), Semi-Bold 600 (Titulos,texto botones), Regulas 400 (Texto)
