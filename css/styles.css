@@ -37,24 +37,106 @@ h4 {
     font-size: 2.6rem;
 }
 
+.fw-400{
+    font-weight: 400;
+}
+
+.fw-500{
+    font-weight: 500;
+}
+
+.fw-600{
+    font-weight: 600;
+}
+
+/* Mi Header */
+.index-header{
+    background-image: url(../img/Header.png);
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.contenido-header {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    height: 40%;
+    width: 40%;
+    padding-top: 1rem;
+    align-self: center;
+}
+
+.barra_nav{
+    background-color: #1e1e1e;
+    height: 4rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.barra_nav a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 2rem;
+    margin-right: 4rem;
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+}
+
+.barra_nav a:hover{
+    color: #7c7c7c;
+}
+
+.contenido-header h1{
+    font-size: 4rem;
+    color: #1e1e1e;
+    max-width: 80rem;
+    word-spacing: 2rem;
+    letter-spacing: 1rem;
+    margin: 0;
+    margin-top: 5rem;
+    margin-bottom: 6rem;
+}
+
+.boton-amarillo{
+    background-color: #ffd24f;
+    padding: 2rem 3rem;
+    font-size: 3rem;
+    text-decoration: none;
+    color: #1e1e1e;
+    text-transform: capitalize;
+    border-radius: 1rem;
+    letter-spacing: .5rem;
+    text-align: center;
+}
+
+.contenedor a{
+    margin-left: 25rem;
+}
+
+
+
+
 /* Header */
 .site-header {
     background-color: #1e1e1e;
     padding: 0rem 0 2rem 0;
 }
 
-.contenido-header {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.site-header.inicio{
+    background-image: url(../img/Header.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+    min-height: 60rem;
 }
 
 .barra {
     padding-top: 2rem;
     display: flex;
     justify-content: space-between;
-    
     align-items: center;
 }
 .logo-comprimido{
