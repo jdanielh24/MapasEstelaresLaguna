@@ -54,16 +54,17 @@ h4 {
     padding-top: 2rem;
     display: flex;
     justify-content: space-between;
-    
+
     align-items: center;
 }
-.logo-comprimido{
+
+.logo-comprimido {
     width: 17rem;
     height: auto;
 }
 
 /* Botones*/
-.boton{
+.boton {
     color: #1e1e1e;
     font-weight: 700;
     text-decoration: none;
@@ -75,50 +76,63 @@ h4 {
     border: none;
 }
 
-.boton:hover{
+.boton:hover {
     cursor: pointer;
 }
 
-.boton-amarillo{
+.boton-amarillo {
     background-color: #ffd24f;
 }
 
 /* NAVEGACION */
-.navegacion a{
+.navegacion a {
     color: #ffffff;
     text-decoration: none;
     font-size: 2.2rem;
     margin-right: 3rem;
 }
-.navegacion a:last-of-type{
+
+.navegacion a:last-of-type {
     margin: 0;
 }
 
 
 /*PRODUCTOS*/
-.contenedor-disenos{
+.contenedor-disenos {
     display: flex;
     justify-content: space-between;
     margin-bottom: 2rem;
     flex-wrap: wrap;
+    margin-top: -2rem;
 }
-.diseno{
+
+.diseno {
     flex-grow: 0;
     flex-shrink: 0;
-    flex-basis: calc((33.3%) - 7rem);
+    flex-basis: calc((33.3%) - 5rem);
     margin-bottom: 2rem;
 }
-.contenido-diseno{
-    padding: 0rem;
+.marco-imagen img {
+    width: 100%;
+    height: 30rem;
+    object-fit: cover;
+    object-position: 50% 50%;
 }
+
+.contenido-diseno {
+    padding: 1 2rem;
+}
+
 .contenido-diseno h3,
-.contenedor-disenos p{
+.contenedor-disenos p {
     margin: 0;
 }
-.contenido-diseno a{
+
+.contenido-diseno a {
     margin-top: 1rem;
 }
-.marco-imagen{
+
+.marco-imagen {
     padding: 1rem 1rem 0 1rem;
     border: 0.66rem solid #ffd24f;
 }
