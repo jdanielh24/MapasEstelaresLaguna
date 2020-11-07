@@ -50,3 +50,11 @@ h4 {
 .barra {
     padding-top: 3rem;
 }
+
+/* NAVEGACION */
+.navegacion a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 2.2rem;
+    display: block;
+}
