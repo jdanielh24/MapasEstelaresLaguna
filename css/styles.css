@@ -54,7 +54,12 @@ h4 {
     padding-top: 2rem;
     display: flex;
     justify-content: space-between;
+    
     align-items: center;
+}
+.logo-comprimido{
+    width: 17rem;
+    height: auto;
 }
 
 /* NAVEGACION */
