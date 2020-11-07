@@ -72,3 +72,19 @@ h4 {
 .navegacion a:last-of-type{
     margin: 0;
 }
+
+
+/*PRODUCTOS*/
+.contenedor-disenos{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+.diseno{
+    /*flex: 0 0 calc((33.3%) - 1rem);*/
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: calc((33.3%) - 6rem);
+    margin-bottom: 2rem;
+}
