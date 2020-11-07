@@ -32,3 +32,21 @@ h3 {
 h4 {
     font-size: 2.6rem;
 }
+
+/* Header */
+.site-header {
+    background-color: #1e1e1e ;
+    padding: 1rem 0 3rem 0;
+}
+
+.contenido-header {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.barra {
+    padding-top: 3rem;
+}
