@@ -101,7 +101,7 @@ h4 {
 .contenedor-disenos {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
     flex-wrap: wrap;
     margin-top: -2rem;
 }
@@ -110,7 +110,7 @@ h4 {
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: calc((33.3%) - 5rem);
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
 }
 .marco-imagen img {
     width: 100%;
@@ -135,4 +135,41 @@ h4 {
 .marco-imagen {
     padding: 1rem 1rem 0 1rem;
     border: 0.66rem solid #ffd24f;
+}
+/*preciosTamaños*/
+.contenedor-precios {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: CENTER;
+}
+.info-precio-tamano  {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 0rem;
+    margin-bottom: 3rem;
+    background-color: #1e1e1e;  
+    flex-basis: calc((33.3%) - 1rem);
+    width: fit-content;
+
+}
+.informacion{
+    display: flex;
+    justify-content: center;
+    margin-bottom: -3rem;
+    flex-wrap: wrap;
+    margin-top: -3rem;
+    align-items: center;
+
+}
+.informacion img {
+    width: 5%;
+    height: auto;
+    object-fit: cover;
+    padding: 4rem;
+}
+.informacion p {
+    padding: 2rem;
+    color: #ffffff;
 }
