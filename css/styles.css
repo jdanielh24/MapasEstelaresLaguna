@@ -116,6 +116,48 @@ h4 {
     margin-left: 25rem;
 }
 
+/* Footer */
+.footer{
+    background-color: #1e1e1e;
+    margin: 0;
+    padding: 2rem 3rem;
+}
+
+.contenedor-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.in_lg{
+    height: 50px;
+    width: 50px;
+    margin: 0;
+}
+
+.fb_lg{
+    height: 50px;
+    width:50px;
+    margin: 0;
+    margin-right: 1rem;
+}
+
+.nav_footer a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin-right: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+}
+
+.nav_footer a:hover{
+    color: #7c7c7c;
+}
+
+.copy{
+    color: #ffffff;
+}
 
 
 
@@ -136,6 +178,7 @@ h4 {
 .barra {
     padding-top: 2rem;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
 }
