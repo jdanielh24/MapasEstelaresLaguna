@@ -295,6 +295,9 @@ h4 {
 .navegacion a:last-of-type {
     margin: 0;
 }
+.barra a:hover{
+    color: #7c7c7c;
+}
 
 
 /*PRODUCTOS*/
