@@ -251,8 +251,7 @@ h4 {
 
 .barra {
     padding-top: 2rem;
-    display: flex;
-    flex-direction: column;
+    display: flex;;
     justify-content: space-between;
 
     align-items: center;
