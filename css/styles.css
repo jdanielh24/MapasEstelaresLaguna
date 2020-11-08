@@ -57,7 +57,7 @@ h4 {
     height: 100vh;
 }
 
-.contenido-header {
+.contenido-header-inicio {
     display: flex;
     flex-direction: column;
 }
@@ -89,7 +89,7 @@ h4 {
     color: #7c7c7c;
 }
 
-.contenido-header h1{
+.contenido-header-inicio h1{
     font-size: 4rem;
     color: #1e1e1e;
     max-width: 80rem;
@@ -112,7 +112,7 @@ h4 {
     text-align: center;
 }
 
-.contenedor a{
+.margen-boton{
     margin-left: 25rem;
 }
 
