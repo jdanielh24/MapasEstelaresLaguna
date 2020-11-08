@@ -67,6 +67,7 @@ h4 {
     background-position: center center;
     background-size: cover;
     height: 100vh;
+    margin-top: -8rem;
 }
 
 .contenido-header-inicio {
