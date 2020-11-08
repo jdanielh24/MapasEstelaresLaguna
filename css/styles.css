@@ -100,17 +100,6 @@ h4 {
     margin-bottom: 6rem;
 }
 
-.boton-amarillo{
-    background-color: #ffd24f;
-    padding: 2rem 3rem;
-    font-size: 3rem;
-    text-decoration: none;
-    color: #1e1e1e;
-    text-transform: capitalize;
-    border-radius: 1rem;
-    letter-spacing: .5rem;
-    text-align: center;
-}
 
 .margen-boton{
     margin-left: 25rem;
@@ -285,6 +274,7 @@ h4 {
     display: inline-block;
     text-align: center;
     border: none;
+    text-transform: capitalize;
 }
 
 .boton:hover {
