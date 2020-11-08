@@ -251,8 +251,7 @@ h4 {
 /* Header */
 .site-header {
     background-color: #1e1e1e;
-    padding: 0rem 0 2rem 0;
-
+    padding: 0.8rem 0;
     position: fixed; 
     top: 0;
     width: 100%;
@@ -267,7 +266,7 @@ h4 {
 }
 
 .barra {
-    padding-top: 2rem;
+    padding-top: 0rem;
     display: flex;
     ;
     justify-content: space-between;
@@ -275,8 +274,8 @@ h4 {
 }
 
 .logo-comprimido {
-    width: auto;
-    height: 2rem;
+    width: 15rem;
+    height: auto;
 }
 
 /* Botones*/
