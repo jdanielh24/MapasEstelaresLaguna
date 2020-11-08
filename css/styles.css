@@ -55,6 +55,7 @@ h4 {
 }
 .titulos{
     text-transform: uppercase;
+    letter-spacing: 0.5rem;
 }
 
 /* Mi Header */
@@ -317,7 +318,7 @@ h4 {
     justify-content: space-between;
     margin-bottom: 4rem;
     flex-wrap: wrap;
-    margin-top: -1rem;
+   
 }
 
 .diseno {
@@ -343,7 +344,7 @@ h4 {
 }
 
 .contenido-diseno a {
-    margin-top: 1rem;
+    margin-top: 2rem;
 }
 
 .marco-imagen {
@@ -386,6 +387,7 @@ h4 {
 .informacion p {
     padding: 2rem;
     color: #ffffff;
+    letter-spacing: 0.3rem;
 }
 
 /* Opiniones */
