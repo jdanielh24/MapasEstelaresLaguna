@@ -331,6 +331,73 @@ h4 {
     color: #7c7c7c;
 }
 
+/* Nosotros */
+.descripcion-nosotros{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5rem;
+}
+.info-nosotros{
+    display: flex;
+    flex-direction: row;
+    margin-top: 5rem;
+}
+
+.info-nosotros img{
+    height: 35rem;
+    width: 46rem; 
+    margin-right: 5rem;
+}
+
+.texto-nosotros h1,
+.texto.nosotros p{
+    margin: 0;
+    color: #1e1e1e;
+}
+
+.texto-nosotros h1{
+    font-size: 3rem;
+}
+
+.texto-nosotros p{
+    font-size: 1.5rem;
+    text-align: justify;
+}
+
+.descripcion-nosotros h2,
+.descripcion-nosotros p{
+    margin: 0;
+    color: #1e1e1e;
+}
+
+.descripcion-nosotros img{
+    height: 3rem;
+    width: 3rem;
+    margin: 0;
+}
+
+.descripcion-nosotros h2{
+    font-size: 1.6rem;
+}
+
+.descripcion-nosotros p{
+    font-size: 1.3rem;
+}
+
+.contenedor-descr{
+    margin-top: 5rem;
+    width: 37%;
+    border: 2px solid #1e1e1e;
+    padding: 1rem;
+    height: 15rem;
+    margin-right: 5rem;
+    
+}
+
+.descripcion .contenedor-descr:last-of-type{
+    margin-right: 0;
+}
+
 
 /*PRODUCTOS*/
 .contenedor-disenos {
@@ -408,6 +475,7 @@ h4 {
     height: auto;
     object-fit: cover;
     padding: 4rem;
+    box-sizing: initial;
 }
 
 .informacion p {
@@ -500,72 +568,6 @@ h4 {
     width: 20rem;
     margin-top: 8rem;
     margin-bottom: 8rem;
-}
-
-/* Nosotros */
-.info-nosotros{
-    display: flex;
-    flex-direction: row;
-    margin-top: 5rem;
-}
-
-.info-nosotros img{
-    height: 35rem;
-    width: 46rem; 
-    margin-right: 5rem;
-}
-
-.texto-nosotros h1,p{
-    margin: 0;
-    color: #1e1e1e;
-}
-
-.texto-nosotros h1{
-    font-size: 3rem;
-}
-
-.texto-nosotros p{
-    font-size: 1.5rem;
-    text-align: justify;
-}
-
-.descripcion h2,p{
-    margin: 0;
-    color: #1e1e1e;
-}
-
-.descripcion img{
-    height: 3rem;
-    width: 3rem;
-    margin: 0;
-}
-
-.descripcion h2{
-    font-size: 1.6rem;
-}
-
-.descripcion p{
-    font-size: 1.3rem;
-}
-
-.contenedor-descr{
-    margin-top: 5rem;
-    width: 37%;
-    border: 2px solid #1e1e1e;
-    padding: 1rem;
-    height: 15rem;
-    margin-right: 5rem;
-    
-}
-
-.descripcion{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 5rem;
-}
-
-.descripcion .contenedor-descr:last-of-type{
-    margin-right: 0;
 }
 
 /** Contacto **/
