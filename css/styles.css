@@ -336,6 +336,7 @@ h4 {
     display: flex;
     justify-content: space-between;
     margin-bottom: 5rem;
+    flex-wrap: wrap;
 }
 .info-nosotros{
     display: flex;
@@ -390,8 +391,7 @@ h4 {
     border: 2px solid #1e1e1e;
     padding: 1rem;
     height: 15rem;
-    margin-right: 5rem;
-    
+    flex-basis: calc((33.3%) - 5rem);
 }
 
 .descripcion .contenedor-descr:last-of-type{
