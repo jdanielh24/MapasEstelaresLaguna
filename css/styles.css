@@ -69,7 +69,7 @@ h4 {
     letter-spacing: 0.5rem;
 }
 .contenido-centrado{
-    max-width: 60rem;
+    max-width: 100rem;
 }
 
 /* Mi Header */
@@ -550,20 +550,23 @@ h4 {
 }
 
 .imagenes-redes {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 50rem;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 20rem;
 }
 
 .imagenes-redes img {
-    height: 20rem;
-    width: 20rem;
+    height: 25rem;
+    width: 25rem;
     margin-top: 8rem;
     margin-bottom: 8rem;
 }
 
 /** Contacto **/
+.contacto-form{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
 .contacto-form p {
     font-size: 1.4rem;
     color: #4f4f4f;
@@ -600,12 +603,7 @@ select {
 textarea {
     height: 8em;
 }
-.forma-contacto {
-    max-width:30rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+
 .centrado{
     display: flex;
     justify-content: center;
