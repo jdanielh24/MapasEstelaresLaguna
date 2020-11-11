@@ -92,34 +92,47 @@
                 </fieldset>
             </div>
 
-            
-            <fieldset >
+
+            <fieldset>
                 <legend>Personaliza tu mapa</legend>
 
-            
+                <div class="grid-datos">
+                    <div class="dato-mapa">
+                        <label for="ciudad">Ciudad</label>
+                        <input type="text" id="ciudad" placeholder="Ciudad de tu momento especial" required>
+                    </div>
 
-                <label for="ciudad">Ciudad</label>
-                <input type="text" id="ciudad" placeholder="Ciudad de tu momento especial" required>
+                    <div class="dato-mapa">
+                        <label for="fecha">Fecha</label>
+                        <input type="date" id="fecha" required>
+                    </div>
 
-                <label for="fecha">Fecha</label>
-                <input type="date" id="fecha" required>
+                    <div class="dato-mapa">
+                        <label for="iniciales">Iniciales</label>
+                        <input type="text" id="iniciales" placeholder="Iniciales o nombres (Ej. J & A)">
+                    </div>
 
-                <label for="frase">Frase</label>
-                <textarea id="frase"
-                    placeholder="Frase o texto para acompañar tu mapa(Ej. Entre todas las estrellas eres mi favorita)"></textarea>
+                    <div class="dato-mapa">
+                        <label for="cancion">Canción</label>
+                        <input type="text" id="canción" placeholder="(Ej. Chasing Cars-Snow Patrol)">
+                    </div>
 
-                <label for="iniciales">Iniciales</label>
-                <input type="text" id="iniciales" placeholder="Iniciales o nombres (Ej. J & A)">
+                    <div class="dato-mapa">
+                        <label for="frase">Frase</label>
+                        <textarea id="frase"
+                            placeholder="Frase o texto para acompañar tu mapa(Ej. Entre todas las estrellas eres mi favorita)"></textarea>
+                    </div>
 
-                <label for="cancion">Canción</label>
-                <input type="text" id="canción" placeholder="(Ej. Chasing Cars-Snow Patrol)">
+                    <div class="dato-mapa">
+                        <label for="codigo">Tipo de código para la canción</label>
+                        <select id="codigo">
+                            <option value="" disabled selected>-- Seleccione --</option>
+                            <option value="spotify">Código Spotify</option>
+                            <option value="qr">QR de Youtube</option>
+                        </select>
+                    </div>
 
-                <label for="codigo">Tipo de código para la canción</label>
-                <select id="codigo">
-                    <option value="" disabled selected>-- Seleccione --</option>
-                    <option value="spotify">Código Spotify</option>
-                    <option value="qr">QR de Youtube</option>
-                </select>
+                </div>
 
             </fieldset>
 

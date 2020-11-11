@@ -609,3 +609,8 @@ textarea {
     justify-content: center;
     margin-bottom: 3rem;
 }
+.grid-datos{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+}
