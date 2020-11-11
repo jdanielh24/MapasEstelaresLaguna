@@ -410,11 +410,6 @@ h4 {
     margin-bottom: 4rem;
 }
 
-.diseno{
-    /*Aquí iba código cuando se utilizaba flex*/
-    /*Ya no es necesario con grid*/
-}
-
 .marco-imagen img {
     width: 100%;
     height: 28rem;
