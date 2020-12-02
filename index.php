@@ -12,7 +12,10 @@
 
 <body>
 
-    <?php include ('layout/headerIndex.php'); ?>
+    <?php 
+        include ('layout/headerIndex.php'); 
+        include ('php/conexion.php');
+    ?>
 
     <main class="contenedor">
         <div class="cont-part1">
