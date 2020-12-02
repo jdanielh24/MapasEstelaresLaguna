@@ -83,12 +83,12 @@ $resultado = $conexion->query("select * from productos order by id DESC")or die(
               
             ?>
               <tr>
-                <td><?php echo$f['id'] ?></td>
-                <td><?php echo$f['nombre'] ?></td>
-                <td><?php echo$f['descripcion'] ?></td>
-                <td><?php echo$f['precio'] ?></td>
-                <td><?php echo$f['imagen'] ?></td>
-                <td><?php echo$f['inventario'] ?></td>
+                <td><?php echo$f['id']; ?></td>
+                <td><?php echo$f['nombre']; ?></td>
+                <td><?php echo$f['descripcion']; ?></td>
+                <td><?php echo$f['precio']; ?></td>
+                <td><?php echo$f['imagen']; ?></td>
+                <td><?php echo$f['inventario']; ?></td>
               </tr>
             <?php 
               }
