@@ -18,17 +18,27 @@
         <h2 class="fw-600 centrar-texto titulos">Nuestros productos</h2>
 
         <div class="contenedor-disenos centrar-texto">
-            <div class="diseno">
-                <div class="marco-imagen">
-                    <img src="img/diseño1.jpg" alt="Mapa silueta">
-                </div>
-                <div class="contenido-diseno">
-                    <h3 class=" fw-500">Mapa con silueta</h3>
-                    <p>Lleva tu mapa a otro nivel y dejanos dibujar una fotografía tuya de manera original. </p>
-                    <a href="contacto.html" class="boton boton-amarillo">Quiero uno</a>
-                </div>
-            </div>
 
+            <?php
+            include('php/conexion.php');
+            $resultado = $conexion->query("select * from productos order by id DESC") or die($conexion->error);
+            while ($fila = mysqli_fetch_array($resultado)) {
+            ?>
+                <div class="diseno">
+                    <div class="marco-imagen">
+                        <img src="img/<?php echo $fila['imagen'];?>" alt="<?php echo $fila['nombre'];?>">
+                    </div>
+                    <div class="contenido-diseno">
+                        <h3 class=" fw-500"> <?php echo $fila['nombre'];?> </h3>
+                        <p> <?php echo $fila['descripcion'];?> </p>
+                        <p> $<?php echo $fila['precio'];?> </p>
+                        <a href="contacto.html" class="boton boton-amarillo">Agregar al carrito</a>
+                    </div>
+                </div>
+
+            <?php } ?>
+
+            <!--
             <div class="diseno">
                 <div class="marco-imagen">
                     <img src="img/diseño2.jpg" alt="Mapa normal">
@@ -50,6 +60,7 @@
                     <a href="contacto.html" class="boton boton-amarillo">Quiero uno</a>
                 </div>
             </div>
+            -->
         </div>
     </main>
 
