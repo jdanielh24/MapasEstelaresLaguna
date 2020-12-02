@@ -12,21 +12,7 @@
 
 <body>
 
-    <header class="site-header">
-        <div class="contenedor contenidor-header">
-            <div class="barra">
-                <a href="index.html">
-                    <img src="img/LOGO_blanco.png" class="logo-comprimido" alt="Logo empresa">
-                </a>
-                <nav class="navegacion">
-                    <a href="index.html">Home</a>
-                    <a href="nosotros.html">Nosotros</a>
-                    <a href="productos.html">Productos</a>
-                    <a href="contacto.html">Contacto</a>
-                </nav>
-            </div>
-        </div>
-    </header>
+    <?php include('layout/header.php'); ?>
 
     <main class="contacto contenedor">
         <h2 class="fw-500">¿Quieres un mapa?</h2>
@@ -119,8 +105,7 @@
 
                     <div class="dato-mapa">
                         <label for="frase">Frase</label>
-                        <textarea id="frase"
-                            placeholder="Frase o texto para acompañar tu mapa(Ej. Entre todas las estrellas eres mi favorita)"></textarea>
+                        <textarea id="frase" placeholder="Frase o texto para acompañar tu mapa(Ej. Entre todas las estrellas eres mi favorita)"></textarea>
                     </div>
 
                     <div class="dato-mapa">
@@ -143,27 +128,7 @@
         </form>
     </section>
 
-    <footer class="footer">
-        <div class="contenedor-footer contenedor">
-            <nav class="nav_footer">
-                <a href="index.html">home</a>
-                <a href="nosotros.html">nosotros</a>
-                <a href="productos.html">productos</a>
-                <a href="contacto.html">contacto</a>
-            </nav>
-
-            <div class="logos">
-                <a href="https://www.facebook.com/mapasestelareslag/" target="_blank">
-                    <img src="img/Facebook.png" alt="logo_facebook" class="fb_lg">
-                </a>
-                <a href="https://www.instagram.com/" target="_blank">
-                    <img src="img/Instagram.png" alt="logo_instagram" class="in_lg">
-                </a>
-            </div>
-
-            <p class="copy">Todos los Derechos Reservados 2020 &copy;</p>
-        </div>
-    </footer>
+    <?php include('layout/footer.php'); ?>
 
 </body>
 

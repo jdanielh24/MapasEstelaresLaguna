@@ -11,28 +11,8 @@
 </head>
 
 <body>
-    <header class="index-header">
-        <div class="contenido-header-inicio">
-            <a href="index.html" class="logo">
-                <img src="img/LOGO.png" alt="Logo Principal">
-            </a>
 
-            <div class="barra_nav fw-400">
-                <nav>
-                    <a href="index.html">home</a>
-                    <a href="nosotros.html">nosotros</a>
-                    <a href="productos.html">productos</a>
-                    <a href="contacto.html">contacto</a>
-                </nav>
-            </div>
-            <div class="contenedor mini-contenedor">
-                <h1 class="fw-600">El regalo perfecto para Las ocasiones especiales</h1>
-                <div class="margen-boton">
-                    <a href="contacto.html" class="boton boton-amarillo fw-600">quiero uno</a>
-                </div>
-            </div>
-        </div>
-    </header>
+    <?php include ('layout/headerIndex.php'); ?>
 
     <main class="contenedor">
         <div class="cont-part1">
@@ -90,27 +70,7 @@
         </div>
     </section>
 
-    <footer class="footer">
-        <div class="contenedor-footer contenedor">
-            <nav class="nav_footer">
-                <a href="index.html">home</a>
-                <a href="nosotros.html">nosotros</a>
-                <a href="productos.html">productos</a>
-                <a href="contacto.html">contacto</a>
-            </nav>
-
-            <div class="logos">
-                <a href="https://www.facebook.com/mapasestelareslag/" target="_blank">
-                    <img src="img/Facebook.png" alt="logo_facebook" class="fb_lg">
-                </a>
-                <a href="https://www.instagram.com/" target="_blank">
-                    <img src="img/Instagram.png" alt="logo_instagram" class="in_lg">
-                </a>
-            </div>
-
-            <p class="copy">Todos los Derechos Reservados 2020 &copy;</p>
-        </div>
-    </footer>
+    <?php include ('layout/footer.php'); ?>
 
 </body>
 
