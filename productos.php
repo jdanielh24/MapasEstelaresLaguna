@@ -38,29 +38,6 @@
 
             <?php } ?>
 
-            <!--
-            <div class="diseno">
-                <div class="marco-imagen">
-                    <img src="img/diseño2.jpg" alt="Mapa normal">
-                </div>
-                <div class="contenido-diseno">
-                    <h3 class="fw-500">Mapa normal</h3>
-                    <p>Un mapa para los amantes de lo clásico. Deja que las estrellas hablen por ti.</p>
-                    <a href="contacto.html" class="boton boton-amarillo">Quiero uno</a>
-                </div>
-            </div>
-
-            <div class="diseno">
-                <div class="marco-imagen">
-                    <img src="img/diseño3.jpg" alt="Mapa foto de fondo">
-                </div>
-                <div class="contenido-diseno">
-                    <h3 class="fw-500">Mapa con foto</h3>
-                    <p>Acompaña tu mapa con una fotografía de fondo para darle un estilo original.</p>
-                    <a href="contacto.html" class="boton boton-amarillo">Quiero uno</a>
-                </div>
-            </div>
-            -->
         </div>
     </main>
 
