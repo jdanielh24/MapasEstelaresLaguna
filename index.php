@@ -13,8 +13,7 @@
 <body>
 
     <?php 
-        include ('layout/headerIndex.php'); 
-        include ('php/conexion.php');
+        include ('layout/headerIndex.php');
     ?>
 
     <main class="contenedor">
