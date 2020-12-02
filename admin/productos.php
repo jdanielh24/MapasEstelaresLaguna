@@ -1,3 +1,13 @@
+<?php 
+session_start();
+
+include "../php/conexion.php";
+
+$resultado = $conexion->query("select * from productos order by id DESC")or die($conexion->error);
+
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -55,7 +65,36 @@
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
-        
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Nombre</th>
+              <th>Descripcion</th>
+              <th>Precio</th>
+              <th>Imagen</th>
+              <th>Inventario</th>
+            </tr>
+          </thead>
+          <tbody>
+            <?php 
+              while($f = mysqli_fetch_array($resultado)){
+
+              
+            ?>
+              <tr>
+                <td><?php echo$f['id'] ?></td>
+                <td><?php echo$f['nombre'] ?></td>
+                <td><?php echo$f['descripcion'] ?></td>
+                <td><?php echo$f['precio'] ?></td>
+                <td><?php echo$f['imagen'] ?></td>
+                <td><?php echo$f['inventario'] ?></td>
+              </tr>
+            <?php 
+              }
+            ?>
+          </tbody>
+        </table>
       </div><!-- /.container-fluid -->
     </section>
     <!-- /.content -->
