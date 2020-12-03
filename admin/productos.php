@@ -1,7 +1,8 @@
 <?php 
 include('../php/conexion.php');
 
-$resultado = $conexion->query("select * from productos order by id DESC")or die($conexion->error);
+$resultado = $conexion->query("select * from productos order by id")or die($conexion->error);
+
 ?>
 
 <!DOCTYPE html>
@@ -47,11 +48,10 @@ $resultado = $conexion->query("select * from productos order by id DESC")or die(
           <div class="col-sm-6">
             <h1 class="m-0 text-dark">Productos</h1>
           </div><!-- /.col -->
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Dashboard v1</li>
-            </ol>
+          <div class="col-sm-6 text-right">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+            <i class="fa fa-plus"></i> Insertar Producto
+            </button>
           </div><!-- /.col -->
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
@@ -61,12 +61,106 @@ $resultado = $conexion->query("select * from productos order by id DESC")or die(
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
-        <h1>Hola</h1>
+        <?php 
+          if(isset($_GET['error'])){
+
+        ?>
+        <div class="alert alert-danger" role="alert">
+          <?php echo $_GET['error']; ?>
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <?php } ?>
+
+        <?php 
+          if(isset($_GET['success'])){
+
+        ?>
+        <div class="alert alert-success" role="alert">
+          Se ha insertado correctamente.
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <?php } ?>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Nombre</th>
+              <th>Descripcion</th>
+              <th>Precio</th>
+              <th>Imagen</th>
+              <th>Inventario</th>
+            </tr>
+          </thead>
+          <tbody>
+            <?php 
+              while($f = mysqli_fetch_array($resultado)){
+
+              
+            ?>
+              <tr>
+                <td><?php echo $f['id']; ?></td>
+                <td><?php echo $f['nombre']; ?></td>
+                <td><?php echo $f['descripcion']; ?></td>
+                <td><?php echo $f['precio']; ?></td>
+                <td><img src="../img/<?php echo $f['imagen'];?>" width="100px" height="100px"></td>
+                <td><?php echo $f['inventario']; ?></td>
+              </tr>
+            <?php 
+              }
+            ?>
+          </tbody>
+        </table>
       </div><!-- /.container-fluid -->
     </section>
     <!-- /.content -->
   </div>
   
+  <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <form action="../php/insertarProducto.php" method="POST" enctype="multipart/form-data">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Insertar Producto</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+              <label for="nombre">Nombre</label>
+              <input type="text" name="nombre" placeolder="nombre" id="nombre" class="form-control" required>
+          </div>
+          <div class="form-group">
+              <label for="descripcion">Descripción</label>
+              <input type="text" name="descripcion" placeolder="descripcion" id="descripcion" class="form-control" required>
+          </div>
+          <div class="form-group">
+              <label for="precio">Precio</label>
+              <input type="number" min="0" name="precio" placeolder="precio" id="precio" class="form-control" required>
+          </div>
+          <div class="form-group">
+              <label for="imagen">Imagen</label>
+              <input type="file" name="imagen" id="imagen" class="form-control" required>
+          </div>
+          <div class="form-group">
+              <label for="inventario">Inventario</label>
+              <input type="number" min="0" name="inventario" placeolder="inventario" id="inventario" class="form-control" required>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary">Guardar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
   <?php include "./layouts/footer.php"; ?>
 
 </div>
