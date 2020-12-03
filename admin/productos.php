@@ -108,6 +108,13 @@ $resultado = $conexion->query("select * from productos order by id")or die($cone
                 <td><?php echo $f['precio']; ?></td>
                 <td><img src="../img/<?php echo $f['imagen'];?>" width="100px" height="100px"></td>
                 <td><?php echo $f['inventario']; ?></td>
+                <td>
+                  <button class="btn btn-danger btn-small btnEliminar" 
+                    data-id="<?php echo $f['id']; ?>" 
+                    data-toggle="modal" data-target="#modalEliminar">
+                    <i class="fa fa-trash"></i>
+                  </button>
+                </td>
               </tr>
             <?php 
               }
@@ -161,6 +168,29 @@ $resultado = $conexion->query("select * from productos order by id")or die($cone
   </div>
 </div>
 
+  <!-- Modal Eliminar-->
+  <div class="modal fade" id="modalEliminar" tabindex="-1" role="dialog" aria-labelledby="modalEliminarLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalEliminarLabel">Eliminar Producto</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ¿Desea eliminar el producto?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-danger eliminar" data-dismiss="modal">Eliminar</button>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
   <?php include "./layouts/footer.php"; ?>
 
 </div>
@@ -200,5 +230,27 @@ $resultado = $conexion->query("select * from productos order by id")or die($cone
 <script src="./dashboard/dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="./dashboard/dist/js/demo.js"></script>
+
+<script>
+  $(document).ready(function(){
+    var idEliminar = -1;
+    var fila;
+    $(".btnEliminar").click(function(){
+      idEliminar = $(this).data('id');
+      fila = $(this).parent('td').parent('tr');
+    });
+    $(".eliminar").click(function(){
+      $.ajax({
+        url: '../php/eliminarProducto.php',
+        method: 'POST',
+        data:{
+          id: idEliminar
+        }
+      }).done(function(res){
+        $(fila).fadeOut(1000);
+      });
+    });
+  });
+</script>
 </body>
 </html>
