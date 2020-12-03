@@ -115,18 +115,8 @@
                                     <p><?php echo $arregloCarrito[$i]['Nombre']; ?></p>
                                 </td>
                                 <td>$<?php echo $arregloCarrito[$i]['Precio']; ?></td>
-                                <td>
-                                    <div class="input-group mb-3" style="max-width: 120px;">
-                                        <div class="input-group-prepend">
-                                            <button class="btn btn-outline-primary js-btn-minus" type="button">&minus;</button>
-                                        </div>
-                                        <input type="text" class="form-control text-center" value="<?php echo $arregloCarrito[$i]['Cantidad']; ?>" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-outline-primary js-btn-plus" type="button">&plus;</button>
-                                        </div>
-                                    </div>
-
-                                </td>
+                                <td><?php echo $arregloCarrito[$i]['Cantidad']; ?></td>
+                                
                                 <td>$<?php echo $arregloCarrito[$i]['Precio'] * $arregloCarrito[$i]['Cantidad']; ?></td>
                                 <td><a href="#" class="btn btn-primary btn-sm btnEliminar" data-id="<?php echo $arregloCarrito[$id]['Id']; ?>">X</a></td>
                             </tr>
