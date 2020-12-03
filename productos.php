@@ -32,7 +32,7 @@
                         <h3 class=" fw-500"> <?php echo $fila['nombre'];?> </h3>
                         <p> <?php echo $fila['descripcion'];?> </p>
                         <p> $<?php echo $fila['precio'];?> </p>
-                        <a href="contacto.html" class="boton boton-amarillo">Agregar al carrito</a>
+                        <a href="cart.php?id=<?php echo $fila['id']; ?>" class="boton boton-amarillo">Agregar al carrito</a>
                     </div>
                 </div>
 
