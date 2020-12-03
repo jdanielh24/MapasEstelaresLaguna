@@ -7,4 +7,5 @@
     if($conexion->connect_error){
         die("Error. No se puede conectar a la base de datos.");
     }
+    
 ?>
