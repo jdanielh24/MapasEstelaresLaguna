@@ -636,3 +636,8 @@ textarea {
 .titulo-tabla{
     font-size: 2.2rem;
 }
+
+.imagen-tabla{
+    width: 20%;
+    height: auto;
+}
