@@ -20,6 +20,10 @@ $arreglo  = $_SESSION['carrito'];
 
 <body>
 
+    <script src="https://www.paypal.com/sdk/js?client-id=AYp8WAzSUQgRz-haVecxj_uEVEjza0f3BG_Gpj_nZs34rx8SZwgPg8mmCdVn4eG3PtPl3OF0lguBW6b6&currency=MXN">
+        // Replace YOUR_SB_CLIENT_ID with your sandbox client ID
+    </script>
+
     <?php include('layout/header.php'); ?>
 
     <section class="contenedor contenido-centrado seccion">
@@ -72,7 +76,7 @@ $arreglo  = $_SESSION['carrito'];
                             ?>
                                 <tr>
                                     <td>$<?php echo $arreglo[$i]['Nombre']; ?> </td>
-                                    <td>$<?php echo  number_format($arreglo[$i]['Precio']*$arreglo[$i]['Cantidad'], 2, '.', ''); ?></td>
+                                    <td>$<?php echo  number_format($arreglo[$i]['Precio'] * $arreglo[$i]['Cantidad'], 2, '.', ''); ?></td>
                                 </tr>
 
                             <?php
@@ -88,6 +92,7 @@ $arreglo  = $_SESSION['carrito'];
                     <h3>Paypal</h3>
                     <p class="mb-0">Haz tu pago directamente con tu cuenta bancaria. Utiliza tu ID de orden
                         como la referencia de pago.</p>
+                    <div id="paypal-button-container"></div>
 
 
                     <button class="boton boton-amarillo btn btn-block" type="submit">Finalizar orden</button>
@@ -100,6 +105,25 @@ $arreglo  = $_SESSION['carrito'];
     </section>
 
     <?php include('layout/footer.php'); ?>
+
+    <script>
+        paypal.Buttons({
+            createOrder: function(data, actions) {
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            value: '<?php echo $total; ?>'
+                        }
+                    }]
+                });
+            },
+            onApprove: function(data, actions) {
+                return actions.order.capture().then(function(details) {
+                    alert('Transaction completed by ' + details.payer.name.given_name);
+                });
+            }
+        }).render('#paypal-button-container'); // Display payment options on your web page
+    </script>
 
 </body>
 
