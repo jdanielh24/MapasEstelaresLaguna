@@ -24,20 +24,20 @@ $arreglo  = $_SESSION['carrito'];
 
     <section class="contenedor contenido-centrado seccion">
         <h2 class="fw-500 centrar-texto">Detalles del pago</h2>
-        <form action="">
+        <form action="orden.php" method="post">
 
             <div class="contacto-form">
                 <fieldset>
                     <legend>Información personal</legend>
 
                     <label for="c_nombre">Nombre</label>
-                    <input type="text" id="c_nombre" placeholder="Tu nombre" required>
+                    <input type="text" id="c_nombre" name="c_nombre" placeholder="Tu nombre" required>
 
                     <label for="c_direccion">Dirección</label>
-                    <input type="text" id="c_direccion" placeholder="Tu direccion" required>
+                    <input type="text" id="c_direccion" name="c_direccion" placeholder="Tu direccion" required>
 
                     <label for="c_ciudad">Ciudad</label>
-                    <select id="c_ciudad">
+                    <select id="c_ciudad" name="c_ciudad">
                         <option value="" disabled selected>-- Seleccione --</option>
                         <option value="gomez">Gómez Palacio</option>
                         <option value="torreon">Torreón</option>
@@ -45,7 +45,7 @@ $arreglo  = $_SESSION['carrito'];
                     </select>
 
                     <label for="c_email">e-mail</label>
-                    <input type="email" id="c_email" placeholder="Tu correo electrónico" required>
+                    <input type="email" id="c_email" name="c_email" placeholder="Tu correo electrónico" required>
 
                     <p>Crea una cuenta introduciendo la información previa y una contraseña. </p>
                     <p> Si ya eres un cliente registrado, inicia sesión en la parte supeior.</p>
@@ -72,7 +72,7 @@ $arreglo  = $_SESSION['carrito'];
                             ?>
                                 <tr>
                                     <td>$<?php echo $arreglo[$i]['Nombre']; ?> </td>
-                                    <td>$<?php echo  number_format($arreglo[$i]['Precio'], 2, '.', ''); ?></td>
+                                    <td>$<?php echo  number_format($arreglo[$i]['Precio']*$arreglo[$i]['Cantidad'], 2, '.', ''); ?></td>
                                 </tr>
 
                             <?php
@@ -89,9 +89,9 @@ $arreglo  = $_SESSION['carrito'];
                     <p class="mb-0">Haz tu pago directamente con tu cuenta bancaria. Utiliza tu ID de orden
                         como la referencia de pago.</p>
 
-                    <div class="form-group">
-                        <button class="boton boton-amarillo btn btn-block" onclick="window.location='orden.php'">Finalizar orden</button>
-                    </div>
+
+                    <button class="boton boton-amarillo btn btn-block" type="submit">Finalizar orden</button>
+
 
                 </fieldset>
             </div>

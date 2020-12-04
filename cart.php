@@ -119,7 +119,7 @@ if (isset($_SESSION['carrito'])) {
                 <td>$<?php echo $arregloCarrito[$i]['Precio']; ?></td>
                 <td><?php echo $arregloCarrito[$i]['Cantidad']; ?></td>
                 <td>$<?php echo $arregloCarrito[$i]['Precio'] * $arregloCarrito[$i]['Cantidad']; ?></td>
-                <td><a href="#" class="btn btn-primary btn-sm btnEliminar" data-id="<?php echo $arregloCarrito[$i]['Id']; ?>">X</a></td>
+                <td><a href="#" class="boton boton-amarillo btn-sm btnEliminar" data-id="<?php echo $arregloCarrito[$i]['Id']; ?>">X</a></td>
               </tr>
 
           <?php }
