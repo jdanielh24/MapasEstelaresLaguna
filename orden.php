@@ -73,7 +73,7 @@ unset($_SESSION['carrito']);
     <main class="contenedor seccion centrar-texto">
         <h2 class="fw-600 titulos">¡GRACIAS!</h2>
         <h3>Tu orden fue realizada con exito</h3>
-        <p><a href="verpedido.php?id_venta=<?php echo $id_venta; ?>" class="boton boton-amarillo">Ver Pedido</a></p>
+        <!--<p><a href="verpedido.php?id_venta=<?php echo $id_venta; ?>" class="boton boton-amarillo">Ver Pedido</a></p>-->
     </main>
 
     <?php include('layout/footer.php'); ?>
