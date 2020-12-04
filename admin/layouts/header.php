@@ -5,7 +5,7 @@
   <!-- /.navbar -->
 
   <!-- Main Sidebar Container -->
-  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+  <aside class="main-sidebar sidebar-dark-primary elevation-4 back-color-sidebar">
     <!-- Brand Logo -->
     <a href="./productos.php" class="brand-link">
       <img src="../img/LOGO_blanco.png" alt="Logo" class="brand-image"
@@ -14,7 +14,7 @@
     </a>
 
     <!-- Sidebar -->
-    <div class="sidebar">
+    <div class="sidebar back-color-sidebar">
       
 
       <!-- Sidebar Menu -->
@@ -38,3 +38,9 @@
     </div>
     <!-- /.sidebar -->
   </aside>
+
+  <style>
+    .back-color-sidebar{
+      background-color: #1e1e1e;
+    }
+  </style>
