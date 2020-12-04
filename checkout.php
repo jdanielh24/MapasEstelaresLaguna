@@ -90,7 +90,7 @@ $arreglo  = $_SESSION['carrito'];
                         como la referencia de pago.</p>
 
                     <div class="form-group">
-                        <button class="boton boton-amarillo btn btn-block" onclick="window.location='thankyou.html'">Place Order</button>
+                        <button class="boton boton-amarillo btn btn-block" onclick="window.location='orden.php'">Finalizar orden</button>
                     </div>
 
                 </fieldset>
