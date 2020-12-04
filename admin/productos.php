@@ -10,7 +10,7 @@ $resultado = $conexion->query("select * from productos order by id")or die($cone
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 3 | Dashboard</title>
+  <title>Mapas Estelares Laguna - Admin</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
@@ -35,6 +35,17 @@ $resultado = $conexion->query("select * from productos order by id")or die($cone
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
+  <style>
+    .back-amarillo{
+      background-color: #ffd24f;
+      border-color: #ffd24f;
+    }
+
+    .btn2:hover{
+      background-color:  #e4bd48;
+      border-color:  #e4bd48;
+    }
+  </style>
 <div class="wrapper">
 
   <?php include "./layouts/header.php"; ?>
@@ -49,7 +60,7 @@ $resultado = $conexion->query("select * from productos order by id")or die($cone
             <h1 class="m-0 text-dark">Productos</h1>
           </div><!-- /.col -->
           <div class="col-sm-6 text-right">
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+            <button type="button" class="btn2 back-amarillo btn btn-primary " data-toggle="modal" data-target="#exampleModal">
             <i class="fa fa-plus"></i> Insertar Producto
             </button>
           </div><!-- /.col -->
@@ -161,7 +172,7 @@ $resultado = $conexion->query("select * from productos order by id")or die($cone
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="submit" class="btn btn-primary">Guardar</button>
+          <button type="submit" class="btn2 back-amarillo btn btn-primary ">Guardar</button>
         </div>
       </form>
     </div>
