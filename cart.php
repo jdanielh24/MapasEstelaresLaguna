@@ -102,9 +102,11 @@ if (isset($_SESSION['carrito'])) {
         <tbody>
 
           <?php
+          $total = 0;
           if (isset($_SESSION['carrito'])) {
             $arregloCarrito = $_SESSION['carrito'];
             for ($i = 0; $i < count($arregloCarrito); $i++) {
+              $total= $total + ( $arregloCarrito[$i]['Precio'] * $arregloCarrito[$i]['Cantidad'] );
           ?>
 
               <tr>
@@ -153,7 +155,7 @@ if (isset($_SESSION['carrito'])) {
               <span class="text-black">Subtotal</span>
             </div>
             <div class="col-md-6 text-right">
-              <strong class="text-black">$230.00</strong>
+              <strong class="text-black">$<?php echo $total;?></strong>
             </div>
           </div>
           <div class="row mb-5">
@@ -161,7 +163,7 @@ if (isset($_SESSION['carrito'])) {
               <span class="text-black">Total</span>
             </div>
             <div class="col-md-6 text-right">
-              <strong class="text-black">$230.00</strong>
+              <strong class="text-black">$<?php echo $total;?></strong>
             </div>
           </div>
 
