@@ -39,7 +39,7 @@ if (isset($_SESSION['user_id'])) {
                     <p class="fw-600 titulos">Bienvenido <?= $user['email']; ?></p>
                     <a href="logout.php" class="boton boton-amarillo fw-600">Cerrar sesión</a>
                 <?php else : ?>
-                    <a href="productos.php" class="boton boton-amarillo fw-600">Iniciar sesión</a>
+                    <a href="login.php" class="boton boton-amarillo fw-600">Iniciar sesión</a>
                 <?php endif; ?>
             </div>
         </div>
