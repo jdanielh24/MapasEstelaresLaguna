@@ -10,7 +10,7 @@ include 'php/conexion.php';
 if (!empty($_POST['email']) && !empty($_POST['pass'])) {
 
     /* crear una sentencia preparada */
-    if ($stmt = $conexion->prepare("SELECT id,email,pass FROM usuario WHERE email=?")) {
+    if ($stmt = $conexion->prepare("SELECT id,email,pass,nivel FROM usuario WHERE email=?")) {
 
         /* ligar parámetros para marcadores */
         $stmt->bind_param("s", $_POST['email']);
@@ -19,22 +19,29 @@ if (!empty($_POST['email']) && !empty($_POST['pass'])) {
         $stmt->execute();
 
         /* bind result variables */
-        $stmt->bind_result($col1,$col2,$col3);
+        $stmt->bind_result($col1,$col2,$col3,$col4);
 
         /* fetch value */
         $stmt->fetch();
 
         $message = '';
 
-        if ( password_verify($_POST['pass'], $col3)) {
-            $_SESSION['user_id'] = $col1;
-            header("Location: index.php");
-        } else {
-            $message = 'Lo sentimos, los datos no coinciden.';
+        if($col4 == "admin"){
+            if($_POST['pass'] == $col3){
+                $_SESSION['user_id'] = $col1;
+            header("Location: admin/productos.php");
+            }
+        }else{
+            if ( password_verify($_POST['pass'], $col3)) {
+                $_SESSION['user_id'] = $col1;
+                header("Location: index.php");
+            } else {
+                $message = 'Lo sentimos, los datos no coinciden.';
+            }
+    
+            /* cerrar sentencia */
+            $stmt->close();
         }
-
-        /* cerrar sentencia */
-        $stmt->close();
     }
 }
 
