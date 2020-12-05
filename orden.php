@@ -15,11 +15,12 @@ if (isset($_POST['c_password'])) {
         $password = $_POST['c_password'];
     }
 }
+$password = password_hash($password, PASSWORD_BCRYPT);
 $conexion->query("insert into usuario (nombre,email,pass,nivel)  
   values( 
     '" . $_POST['c_nombre'] . "',
     '" . $_POST['c_email'] . "',
-    '" . sha1($password) . "',
+    '" . $password . "',
     'cliente' 
         )   
 ") or die($conexion->error);

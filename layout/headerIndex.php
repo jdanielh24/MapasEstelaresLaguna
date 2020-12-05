@@ -4,17 +4,35 @@ session_start();
 include 'php/conexion.php';
 
 if (isset($_SESSION['user_id'])) {
-    $records = $conn->prepare('SELECT id, email, pass FROM users WHERE id = :id');
-    $records->bindParam(':id', $_SESSION['user_id']);
-    $records->execute();
-    $results = $records->fetch(PDO::FETCH_ASSOC);
 
     $user = null;
+    $col2 = null;
 
-    if (count($results) > 0) {
-        $user = $results;
+    /* crear una sentencia preparada */
+    if ($stmt = $conexion->prepare("SELECT id,email,pass FROM usuario WHERE id=?")) {
+
+        /* ligar parámetros para marcadores */
+        $stmt->bind_param("i", $_SESSION['user_id']);
+
+        /* ejecutar la consulta */
+        $stmt->execute();
+
+        /* ligar variables de resultado */
+        $stmt->bind_result($col1, $col2, $col3);
+
+        /* obtener valor */
+        $stmt->fetch();
+
+        if ($col1 > 0) {
+            $user = 1;
+        }
+
+        /* cerrar sentencia */
+        $stmt->close();
     }
 }
+
+
 ?>
 
 <header class="index-header">
@@ -36,7 +54,7 @@ if (isset($_SESSION['user_id'])) {
             <h1 class="fw-600">El regalo perfecto para Las ocasiones especiales</h1>
             <div class="margen-boton">
                 <?php if (!empty($user)) : ?>
-                    <p class="fw-600 titulos">Bienvenido <?= $user['email']; ?></p>
+                    <p class="fw-600 titulos">Bienvenido <?= $col2; ?></p>
                     <a href="logout.php" class="boton boton-amarillo fw-600">Cerrar sesión</a>
                 <?php else : ?>
                     <a href="login.php" class="boton boton-amarillo fw-600">Iniciar sesión</a>
