@@ -8,6 +8,4 @@ if(file_exists('../img/'.$id[0])){
     unlink('../img/'.$id[0]);
 }
 $conexion->query('delete from productos where id='.$_POST['id']);
-echo 'Listo';
-
 ?>
