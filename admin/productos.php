@@ -30,8 +30,8 @@ if ($stmt = $conexion->prepare("SELECT nivel FROM usuario WHERE id=?")) {
 
   $stmt->close();
 }
-$resultado = $conexion->query("select * from productos order by id")or die($conexion->error);
-  /* cerrar sentencia */
+$resultado = $conexion->query("select * from productos order by id") or die($conexion->error);
+/* cerrar sentencia */
 
 ?>
 
@@ -128,6 +128,19 @@ $resultado = $conexion->query("select * from productos order by id")or die($cone
               </button>
             </div>
           <?php } ?>
+
+          <?php
+          if (isset($_GET['edit'])) {
+
+          ?>
+            <div class="alert alert-success" role="alert">
+              Se ha editado el producto correctamente.
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+          <?php } ?>
+
           <table class="table">
             <thead>
               <tr>
@@ -148,11 +161,14 @@ $resultado = $conexion->query("select * from productos order by id")or die($cone
                 <tr>
                   <td><?php echo $f['id']; ?></td>
                   <td><?php echo $f['nombre']; ?></td>
-                  <td><?php echo $f['descripcion']; ?></td>
-                  <td><?php echo $f['precio']; ?></td>
+                  <td width="400px"><?php echo $f['descripcion']; ?></td>
+                  <td>$<?php echo number_format($f['precio'], 2, '.', ''); ?></td>
                   <td><img src="../img/<?php echo $f['imagen']; ?>" width="100px" height="100px"></td>
                   <td><?php echo $f['inventario']; ?></td>
                   <td>
+                    <button class="btn2 back-amarillo btn btn-primary btn-small btnEditar" data-id="<?php echo $f['id']; ?>" data-nombre="<?php echo $f['nombre']; ?>" data-descripcion="<?php echo $f['descripcion']; ?>" data-precio="<?php echo $f['precio']; ?>" data-inventario="<?php echo $f['inventario']; ?>" data-toggle="modal" data-target="#modalEditar">
+                      <i class="fa fa-edit"></i>
+                    </button>
                     <button class="btn btn-danger btn-small btnEliminar" data-id="<?php echo $f['id']; ?>" data-toggle="modal" data-target="#modalEliminar">
                       <i class="fa fa-trash"></i>
                     </button>
@@ -233,6 +249,49 @@ $resultado = $conexion->query("select * from productos order by id")or die($cone
       </div>
     </div>
 
+    <!-- Modal Editar-->
+    <div class="modal fade" id="modalEditar" tabindex="-1" role="dialog" aria-labelledby="modalEditarLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <form action="../php/editarProducto.php" method="POST" enctype="multipart/form-data">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalEditarLabel">Editar Producto</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <input type="hidden" id="idEdit" name="id">
+              <div class="form-group">
+                <label for="nombreEdit">Nombre</label>
+                <input type="text" name="nombre" placeholder="nombre" id="nombreEdit" class="form-control" required>
+              </div>
+              <div class="form-group">
+                <label for="descripcionEdit">Descripción</label>
+                <input type="text" name="descripcion" placeholder="descripcion" id="descripcionEdit" class="form-control" required>
+              </div>
+              <div class="form-group">
+                <label for="precioEdit">Precio</label>
+                <input type="number" min="0" name="precio" placeholder="precio" id="precioEdit" class="form-control" required>
+              </div>
+              <div class="form-group">
+                <label for="imagen">Imagen</label>
+                <input type="file" name="imagen" id="imagen" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="inventarioEdit">Inventario</label>
+                <input type="number" min="0" name="inventario" placeholder="inventario" id="inventarioEdit" class="form-control" required>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="submit" class="btn2 back-amarillo btn btn-primary editar">Guardar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
     <?php include "./layouts/footer.php"; ?>
 
   </div>
@@ -276,6 +335,7 @@ $resultado = $conexion->query("select * from productos order by id")or die($cone
   <script>
     $(document).ready(function() {
       var idEliminar = -1;
+      var idEditar = -1;
       var fila;
       $(".btnEliminar").click(function() {
         idEliminar = $(this).data('id');
@@ -291,6 +351,20 @@ $resultado = $conexion->query("select * from productos order by id")or die($cone
         }).done(function(res) {
           $(fila).fadeOut(1000);
         });
+      });
+
+      $(".btnEditar").click(function() {
+        idEditar = $(this).data('id');
+        var nombre = $(this).data('nombre');
+        var descripcion = $(this).data('descripcion');
+        var precio = $(this).data('precio');
+        var inventario = $(this).data('inventario');
+        $("#nombreEdit").val(nombre);
+        $("#descripcionEdit").val(descripcion);
+        $("#precioEdit").val(precio);
+        $("#inventarioEdit").val(inventario);
+        $("#idEdit").val(idEditar);
+
       });
     });
   </script>
