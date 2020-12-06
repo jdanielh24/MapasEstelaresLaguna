@@ -25,3 +25,8 @@ https://github.com/jdanielh24/MapasEstelaresLaguna
 Nota: En GitHub muestra que se utilizó JavaScript en la mayor parte del proyecto, 
 pero es porque descargamos una plantilla para hacer el diseño del adminsitrador, la 
 cual utiliza archivos de JS. Estos archivos están en admin/dashboard.
+
+
+
+LINK DE LA PAGINA:
+https://mapasestelareslaguna.000webhostapp.com/index.php
