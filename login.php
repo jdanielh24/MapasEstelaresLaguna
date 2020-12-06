@@ -3,7 +3,8 @@
 session_start();
 
 if (isset($_SESSION['user_id'])) {
-    header('Location: index.php');
+    //header('Location: index.php');
+    echo "<script type='text/javascript'> document.location = 'https://mapasestelareslaguna.000webhostapp.com/index.php'; </script>";
 }
 include 'php/conexion.php';
 
@@ -29,12 +30,14 @@ if (!empty($_POST['email']) && !empty($_POST['pass'])) {
         if($col4 == "admin"){
             if($_POST['pass'] == $col3){
                 $_SESSION['user_id'] = $col1;
-            header("Location: admin/productos.php");
+            //header("Location: admin/productos.php");
+            echo "<script type='text/javascript'> document.location = 'https://mapasestelareslaguna.000webhostapp.com/admin/productos.php'; </script>";
             }
         }else{
             if ( password_verify($_POST['pass'], $col3)) {
                 $_SESSION['user_id'] = $col1;
-                header("Location: index.php");
+                //header("Location: index.php");
+                echo "<script type='text/javascript'> document.location = 'https://mapasestelareslaguna.000webhostapp.com/index.php'; </script>";
             } else {
                 $message = 'Lo sentimos, los datos no coinciden.';
             }

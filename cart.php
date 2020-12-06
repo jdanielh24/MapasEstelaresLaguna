@@ -1,3 +1,5 @@
+<?php session_start();?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,7 +24,8 @@
   //unset($_SESSION['carrito']);
 
   if (session_status() == PHP_SESSION_NONE || !isset($_SESSION['user_id'])) {
-    header('Location: login.php');
+    //header("Location: https://mapasestelareslaguna.000webhostapp.com/",307);
+    echo "<script type='text/javascript'> document.location = 'https://mapasestelareslaguna.000webhostapp.com/login.php'; </script>";
   }
 
   if (isset($_SESSION['carrito'])) {
@@ -40,7 +43,8 @@
       if ($encontro == true) {
         $arreglo[$numero]['Cantidad'] = $arreglo[$numero]['Cantidad'] + 1;
         $_SESSION['carrito'] = $arreglo;
-        header("Location: cart.php");
+        //header("Location: cart.php");
+        echo "<script type='text/javascript'> document.location = 'https://mapasestelareslaguna.000webhostapp.com/cart.php'; </script>";
       } else {
         /// no estaba el registro
         $nombre = "";
@@ -61,7 +65,8 @@
         );
         array_push($arreglo, $arregloNuevo);
         $_SESSION['carrito'] = $arreglo;
-        header("Location: ./cart.php");
+        //header("Location: ./cart.php");
+        echo "<script type='text/javascript'> document.location = 'https://mapasestelareslaguna.000webhostapp.com/cart.php'; </script>";
       }
     }
   } else {

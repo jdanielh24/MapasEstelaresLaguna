@@ -3,7 +3,8 @@
 session_start();
 
 if (!isset($_SESSION['user_id'])) {
-  header('Location: index.php');
+  //header('Location: index.php');
+  echo "<script type='text/javascript'> document.location = 'https://mapasestelareslaguna.000webhostapp.com/index.php'; </script>";
 }
 include '../php/conexion.php';
 
@@ -25,7 +26,8 @@ if ($stmt = $conexion->prepare("SELECT nivel FROM usuario WHERE id=?")) {
   $message = '';
 
   if ($res != "admin") {
-    header("Location: ../index.php");
+    //header("Location: ../index.php");
+    echo "<script type='text/javascript'> document.location = 'https://mapasestelareslaguna.000webhostapp.com/index.php'; </script>";
   }
 
   $stmt->close();

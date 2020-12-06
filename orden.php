@@ -1,3 +1,5 @@
+<?php session_start();?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,7 +18,8 @@
 
     <?php
     if (!isset($_SESSION['carrito']) || !isset($_SESSION['user_id'])) {
-        header("Location: ./index.php");
+        //header("Location: ./index.php");
+        echo "<script type='text/javascript'> document.location = 'https://mapasestelareslaguna.000webhostapp.com/index.php'; </script>";
     }
     $arreglo  = $_SESSION['carrito'];
     $total = 0;

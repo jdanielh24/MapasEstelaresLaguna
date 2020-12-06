@@ -1,5 +1,5 @@
 <?php
-session_start();
+//session_start();
 
 include 'php/conexion.php';
 
@@ -37,7 +37,7 @@ if (isset($_SESSION['user_id'])) {
 
 <header class="index-header">
     <div class="contenido-header-inicio">
-        <a href="index.html" class="logo">
+        <a href="index.php" class="logo">
             <img src="img/LOGO.png" alt="Logo Principal">
         </a>
 
