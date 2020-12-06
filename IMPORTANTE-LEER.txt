@@ -1,0 +1,19 @@
+ACCEDER COMO ADMINISTRADOR
+Para acceder como administrador hay que dar en 'Iniciar sesión' y logearse así:
+    correo: admin
+    contraseña: root
+
+
+
+PAGAR CON PAYPAL
+Para hacer el pago con PayPal hay que darle en el boton amarillo de PayPal e ingresar
+con los siguientes datos ficticios para simular el pago:
+    email: sb-qzexp3961777@personal.example.com
+    password: 5a)Y$oOT
+
+
+
+ACCEDER COMO USUARIO
+Cuando se registre como usuario, favor de ingresar un sólo nombre porque con nombres 
+extensos se altera el diseño en algunos puntos donde se utiliza. Lo arreglaremos más
+adelante.
