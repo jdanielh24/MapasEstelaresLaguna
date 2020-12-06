@@ -1,11 +1,3 @@
-<?php
-session_start();
-if (!isset($_SESSION['carrito'])) {
-    header('Location: ./index.php');
-}
-$arreglo  = $_SESSION['carrito'];
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,36 +18,40 @@ $arreglo  = $_SESSION['carrito'];
 
     <?php include('layout/header.php'); ?>
 
+    <?php
+    if (!isset($_SESSION['user_id']) || !isset($_SESSION['carrito'])) {
+        header('Location: ./index.php');
+    }
+    $arreglo  = $_SESSION['carrito'];
+
+    if (isset($_POST['pagado'])) {
+        $pagado = 1;
+    } else {
+        $pagado = 0;
+    }
+
+    ?>
+
     <section class="contenedor contenido-centrado seccion">
         <h2 class="fw-500 centrar-texto">Detalles del pago</h2>
         <form action="orden.php" method="post">
 
             <div class="contacto-form">
                 <fieldset>
-                    <legend>Información personal</legend>
-
-                    <label for="c_nombre">Nombre</label>
-                    <input type="text" id="c_nombre" name="c_nombre" placeholder="Tu nombre" required>
+                    <legend>Información de envío</legend>
 
                     <label for="c_direccion">Dirección</label>
                     <input type="text" id="c_direccion" name="c_direccion" placeholder="Tu direccion" required>
 
                     <label for="c_ciudad">Ciudad</label>
-                    <select id="c_ciudad" name="c_ciudad">
-                        <option value="" disabled selected>-- Seleccione --</option>
+                    <select id="c_ciudad" name="c_ciudad" required>
                         <option value="gomez">Gómez Palacio</option>
                         <option value="torreon">Torreón</option>
                         <option value="lerdo">Lerdo</option>
                     </select>
 
-                    <label for="c_email">e-mail</label>
-                    <input type="email" id="c_email" name="c_email" placeholder="Tu correo electrónico" required>
-
-                    <p>Crea una cuenta introduciendo la información previa y una contraseña. </p>
-                    <p> Si ya eres un cliente registrado, inicia sesión en la parte supeior.</p>
-
-                    <label for="c_password">Contraseña de la cuenta</label>
-                    <input type="password" id="c_password" name="c_password" placeholder="">
+                    <p>Asegurate de tener llenos todos los campos.</p>
+                    <p>Despúes selecciona la opción de pago y completa el proceso.</p>
 
                 </fieldset>
 
@@ -91,12 +87,15 @@ $arreglo  = $_SESSION['carrito'];
 
                     <h3>Paypal</h3>
                     <p class="mb-0">Haz tu pago directamente con tu cuenta bancaria. Utiliza tu ID de orden
-                        como la referencia de pago.</p>
+                        como la referencia de pago. <?php echo $pagado; ?></p>
                     <div id="paypal-button-container"></div>
 
 
-                    <button class="boton boton-amarillo btn btn-block" type="submit">Finalizar orden</button>
+                    <?php if ($pagado == 1) : ?>
+                        <button class="boton boton-amarillo btn btn-block" type="submit">Finalizar orden</button>
+                    <?php endif; ?>
 
+                    <button class="boton boton-amarillo btn btn-block" type="submit">Finalizar orden</button>
 
                 </fieldset>
             </div>
@@ -105,6 +104,8 @@ $arreglo  = $_SESSION['carrito'];
     </section>
 
     <?php include('layout/footer.php'); ?>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
 
     <script>
         paypal.Buttons({
@@ -121,6 +122,14 @@ $arreglo  = $_SESSION['carrito'];
                 return actions.order.capture().then(function(details) {
                     alert('Transaction completed by ' + details.payer.name.given_name);
                 });
+                var pagado = 1;
+                    $.ajax({
+                        type: 'POST',
+                        url: 'checkout.php',
+                        data: {
+                            pagado: pagado
+                        }
+                    });
             }
         }).render('#paypal-button-container'); // Display payment options on your web page
     </script>
