@@ -17,3 +17,11 @@ ACCEDER COMO USUARIO
 Cuando se registre como usuario, favor de ingresar un sólo nombre porque con nombres 
 extensos se altera el diseño en algunos puntos donde se utiliza. Lo arreglaremos más
 adelante.
+
+
+
+REPOSITORIO EN GITHUB:
+https://github.com/jdanielh24/MapasEstelaresLaguna
+Nota: En GitHub muestra que se utilizó JavaScript en la mayor parte del proyecto, 
+pero es porque descargamos una plantilla para hacer el diseño del adminsitrador, la 
+cual utiliza archivos de JS. Estos archivos están en admin/dashboard.
