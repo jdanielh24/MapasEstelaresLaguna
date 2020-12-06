@@ -63,7 +63,7 @@ if (!empty($_POST['email']) && !empty($_POST['pass'])) {
 
     <?php include('layout/header.php'); ?>
 
-    <main class="contenedor seccion contacto-form">
+    <main class="contenedor seccion">
         <?php if (!empty($message)) : ?>
             <p> <?= $message ?></p>
         <?php endif; ?>

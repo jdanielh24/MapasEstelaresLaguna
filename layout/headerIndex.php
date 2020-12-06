@@ -9,7 +9,7 @@ if (isset($_SESSION['user_id'])) {
     $col2 = null;
 
     /* crear una sentencia preparada */
-    if ($stmt = $conexion->prepare("SELECT id,email,pass FROM usuario WHERE id=?")) {
+    if ($stmt = $conexion->prepare("SELECT id,email,pass,nombre FROM usuario WHERE id=?")) {
 
         /* ligar parámetros para marcadores */
         $stmt->bind_param("i", $_SESSION['user_id']);
@@ -18,7 +18,7 @@ if (isset($_SESSION['user_id'])) {
         $stmt->execute();
 
         /* ligar variables de resultado */
-        $stmt->bind_result($col1, $col2, $col3);
+        $stmt->bind_result($col1, $col2, $col3, $col4);
 
         /* obtener valor */
         $stmt->fetch();
@@ -48,6 +48,9 @@ if (isset($_SESSION['user_id'])) {
                 <a href="productos.php">productos</a>
                 <a href="cart.php">carrito</a>
                 <a href="contacto.php">contacto</a>
+                <?php if (!empty($user)) : ?>
+                    <a href="#" ><?= $col4; ?></a>
+                <?php endif; ?>
             </nav>
         </div>
         <div class="contenedor mini-contenedor">
