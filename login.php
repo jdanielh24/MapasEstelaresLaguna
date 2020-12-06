@@ -59,9 +59,7 @@ if (!empty($_POST['email']) && !empty($_POST['pass'])) {
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body>
-
-    
+<body>    
 
     <main class="contenedor seccion">
         <?php if (!empty($message)) : ?>
@@ -69,7 +67,7 @@ if (!empty($_POST['email']) && !empty($_POST['pass'])) {
         <?php endif; ?>
 
         <h1>Login</h1>
-        <p>¿No tienes una cuenta? Puedes registrarte una vez que tengas tu carrito.</p>
+        <p>¿No tienes una cuenta? <a href="signup.php">¡Regístrate!</a></p>
 
         <form action="login.php" method="POST">
             <input type="text" name="email" placeholder="Tu email">
@@ -79,6 +77,5 @@ if (!empty($_POST['email']) && !empty($_POST['pass'])) {
     </main>
 
     <?php include('layout/footer.php'); ?>
-
 
 </body>
