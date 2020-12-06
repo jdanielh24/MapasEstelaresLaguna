@@ -66,7 +66,7 @@ CREATE TABLE ventas (
   PRIMARY KEY (id)
 ) ENGINE=InnoDB;
 
-CREATE TABLE envioss (
+CREATE TABLE envios (
   id_envio int(11) NOT NULL AUTO_INCREMENT,
   direccion varchar(100) NOT NULL,
   ciudad varchar(50) NOT NULL,
