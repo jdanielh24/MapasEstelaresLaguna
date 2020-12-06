@@ -61,7 +61,7 @@ if (!empty($_POST['email']) && !empty($_POST['pass'])) {
 
 <body>
 
-    <?php include('layout/header.php'); ?>
+    
 
     <main class="contenedor seccion">
         <?php if (!empty($message)) : ?>
