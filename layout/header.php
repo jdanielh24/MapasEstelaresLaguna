@@ -4,29 +4,15 @@ session_start();
 include './php/conexion.php';
 
 if (isset($_SESSION['user_id'])) {
-
     $user = null;
-
-    /* crear una sentencia preparada */
     if ($stmt = $conexion->prepare("SELECT id,nombre FROM usuario WHERE id=?")) {
-
-        /* ligar parámetros para marcadores */
         $stmt->bind_param("i", $_SESSION['user_id']);
-
-        /* ejecutar la consulta */
         $stmt->execute();
-
-        /* ligar variables de resultado */
         $stmt->bind_result($col1, $col2);
-
-        /* obtener valor */
         $stmt->fetch();
-
         if ($col1 > 0) {
             $user = 1;
         }
-
-        /* cerrar sentencia */
         $stmt->close();
     }
 }

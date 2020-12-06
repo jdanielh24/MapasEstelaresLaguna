@@ -26,13 +26,18 @@
             ?>
                 <div class="diseno">
                     <div class="marco-imagen">
-                        <img src="img/<?php echo $fila['imagen'];?>" alt="<?php echo $fila['nombre'];?>">
+                        <img src="img/<?php echo $fila['imagen']; ?>" alt="<?php echo $fila['nombre']; ?>">
                     </div>
                     <div class="contenido-diseno">
-                        <h3 class=" fw-500"> <?php echo $fila['nombre'];?> </h3>
-                        <p> <?php echo $fila['descripcion'];?> </p>
-                        <p> $<?php echo $fila['precio'];?> </p>
-                        <a href="cart.php?id=<?php echo $fila['id']; ?>" class="boton boton-amarillo">Agregar al carrito</a>
+                        <h3 class=" fw-500"> <?php echo $fila['nombre']; ?> </h3>
+                        <p> <?php echo $fila['descripcion']; ?> </p>
+                        <p> $<?php echo $fila['precio']; ?> </p>
+
+                        <?php if (!empty($user)) : ?>
+                            <a href="cart.php?id=<?php echo $fila['id']; ?>" class="boton boton-amarillo">Agregar al carrito</a>
+                        <?php else : ?>
+                            <a href="login.php" class="boton boton-amarillo">Agregar al carrito</a>
+                        <?php endif; ?>
                     </div>
                 </div>
 
