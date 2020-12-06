@@ -66,6 +66,15 @@ CREATE TABLE ventas (
   PRIMARY KEY (id)
 ) ENGINE=InnoDB;
 
+CREATE TABLE envioss (
+  id_envio int(11) NOT NULL AUTO_INCREMENT,
+  direccion varchar(100) NOT NULL,
+  ciudad varchar(50) NOT NULL,
+  id_venta int(11) NOT NULL,
+  PRIMARY KEY (id_envios)
+) ENGINE=InnoDB;
+
+
 -- Insertar registros en tabla `productos`
 INSERT INTO productos (nombre, descripcion, precio, imagen, inventario) VALUES
 ('Mapa con silueta', 'Lleva tu mapa a otro nivel y dejanos dibujar una fotografía tuya de manera original. ', 350, 'diseño1.jpg', 30),
