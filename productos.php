@@ -8,6 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>M-E Laguna</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"> </script>
+    <script src="js/main.js"></script>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -15,6 +18,13 @@
 <body>
 
     <?php include('layout/header.php'); ?>
+
+    <div class="box">
+        <a onclick="changecolor('color1')" id="color1">#f5f5dc</a>
+        <a onclick="changecolor('color2')" id="color2">#faf0e6</a>
+        <a onclick="changecolor('color3')" id="color3">#800000</a>
+        <a onclick="changecolor('color4')" id="color4">#ffffff</a>
+    </div>
 
     <main class="contenedor seccion">
         <h2 class="fw-600 centrar-texto titulos">Nuestros productos</h2>
@@ -140,7 +150,15 @@
         </div>
     </section>
 
+    <button id="topBtn"><i class="fas fa-arrow-up"></i></button>
+
     <?php include('layout/footer.php'); ?>
+
+    <script>
+        function changecolor(id){
+            document.body.style.background = document.getElementById(id).innerHTML;
+        }
+    </script>
 
 </body>
 
