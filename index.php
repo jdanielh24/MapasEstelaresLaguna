@@ -7,14 +7,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/styles.css">
     <script
         src="https://code.jquery.com/jquery-3.5.1.js"
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
         crossorigin="anonymous">
     </script>
     <script src="js/main.js"></script>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
     <title>M-E Laguna</title>
 </head>
 
@@ -53,30 +53,54 @@
     </main>
 
     
-
+    
     <div class="contenedor-opiniones">
-        <h2 class="fw-600 color-h2">Nuestros Clientes</h2>
+        <h2 class="fw-600 centrar-texto">Nuestros Clientes</h2>
 
         <div class="slider-outer">
             <img src="img/arrow-left.png" class="prev" alt="Prev">
 
+
+
             <div class="slider-inner">
-                <img src="img/image1.jpg" class="active">
-                <img src="img/image2.jpg">
-                <img src="img/image3.jpg">
-                <img src="img/image4.jpg">
+                <img src="img/beli.png" class="active">
+
+                <div class="cont-opinion">
+                    <img src="img/Belinda.PNG" alt="cliente1">
+                    <div class="cont-op-texto">
+                        <h3 class="fw-500">Belinda</h3>
+                        <p>Excelente servicio y trabajos, a Nodal le gustó demasiado.</p>
+                    </div>
+                </div>
+
+                <div class="cont-opinion">
+                    <img src="img/Lana.PNG" alt="cliente2">
+                    <div class="cont-op-texto fondo">
+                        <h3 class="fw-500">Lana</h3>
+                        <p>Mi novio está encantado, mil gracias!</p>
+                    </div>
+                </div>
+
+                <div class="cont-opinion">
+                    <img src="img/cr7.png" alt="cliente3">
+                    <div class="cont-op-texto">
+                        <h3 class="fw-500">Cristiano Ronaldo</h3>
+                        <p>Minha namorada Georgina adorou! Obrigado meu Deus</p>
+                    </div>
+                </div>
             </div>
 
             <img src="img/arrow-right.png" class="next" alt="Next">
         </div>
 
     </div>
+    
 
     <!--
     <section class="contenedor opiniones">
         <h2 class="fw-600">Nuestros Clientes</h2>
             
-        <div class="cont-opinion active">
+        <div class="cont-opinion">
             <img src="img/Belinda.PNG" alt="cliente1">
             <div class="cont-op-texto">
                 <h3 class="fw-500">Belinda</h3>
