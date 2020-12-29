@@ -58,39 +58,16 @@
         <h2 class="fw-600 centrar-texto">Nuestros Clientes</h2>
 
         <div class="slider-outer">
-            <img src="img/arrow-left.png" class="prev" alt="Prev">
-
-
+            <img src="img/Arrow-left.png" class="prev" alt="Prev">
 
             <div class="slider-inner">
-                <img src="img/beli.png" class="active">
+                <img src="img/belinda2.jpg" class="active">
+                <img src="img/lana2.jpg">
+                <img src="img/cry2.jpg">
 
-                <div class="cont-opinion">
-                    <img src="img/Belinda.PNG" alt="cliente1">
-                    <div class="cont-op-texto">
-                        <h3 class="fw-500">Belinda</h3>
-                        <p>Excelente servicio y trabajos, a Nodal le gustó demasiado.</p>
-                    </div>
-                </div>
-
-                <div class="cont-opinion">
-                    <img src="img/Lana.PNG" alt="cliente2">
-                    <div class="cont-op-texto fondo">
-                        <h3 class="fw-500">Lana</h3>
-                        <p>Mi novio está encantado, mil gracias!</p>
-                    </div>
-                </div>
-
-                <div class="cont-opinion">
-                    <img src="img/cr7.png" alt="cliente3">
-                    <div class="cont-op-texto">
-                        <h3 class="fw-500">Cristiano Ronaldo</h3>
-                        <p>Minha namorada Georgina adorou! Obrigado meu Deus</p>
-                    </div>
-                </div>
             </div>
 
-            <img src="img/arrow-right.png" class="next" alt="Next">
+            <img src="img/Arrow-right.png" class="next" alt="Next">
         </div>
 
     </div>

@@ -644,27 +644,33 @@ textarea {
 
 /*Nuevas Caracteristicas JS-OPINIONES*/
 .contenedor-opiniones{
-    width: 600px;
+    width:900px;
     overflow:auto;
-    justify-content: center;
+    margin-left: 250px;
+}
+
+.contenedor-opiniones h2{
+    color: #1e1e1e;
+    font-size: 45px;
+    margin: 0;
 }
 
 .slider-inner{
-	width:543px;
-	height:118px;
+	width:800px;
+	height:200px;
 	position:relative;
 	overflow:hidden;
 	float:left;
 	padding:3px;
 }
 
-.slider-inner div{
+.slider-inner img{
 	display:none;
-	width:543px;
-	height:118px;
+	width:800px;
+    height:200px;
 }
 
-.slider-inner div.active{
+.slider-inner img.active{
 	display:inline-block;
 }
 
