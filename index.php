@@ -51,8 +51,6 @@
             <img src="img/Mapa2.png" alt="mapa 2" class="tamaño2">
         </div>
     </main>
-
-    
     
     <div class="contenedor-opiniones">
         <h2 class="fw-600 centrar-texto">Nuestros Clientes</h2>
@@ -71,38 +69,6 @@
         </div>
 
     </div>
-    
-
-    <!--
-    <section class="contenedor opiniones">
-        <h2 class="fw-600">Nuestros Clientes</h2>
-            
-        <div class="cont-opinion">
-            <img src="img/Belinda.PNG" alt="cliente1">
-            <div class="cont-op-texto">
-                <h3 class="fw-500">Belinda</h3>
-                <p>Excelente servicio y trabajos, a Nodal le gustó demasiado.</p>
-            </div>
-        </div>
-
-        <div class="cont-opinion">
-            <img src="img/Lana.PNG" alt="cliente2">
-            <div class="cont-op-texto fondo">
-                <h3 class="fw-500">Lana</h3>
-                <p>Mi novio está encantado, mil gracias!</p>
-            </div>
-        </div>
-
-        <div class="cont-opinion">
-            <img src="img/cr7.png" alt="cliente3">
-            <div class="cont-op-texto">
-                <h3 class="fw-500">Cristiano Ronaldo</h3>
-                <p>Minha namorada Georgina adorou! Obrigado meu Deus</p>
-            </div>
-        </div>
-    </section>-->
-
-    
 
     <?php include ('layout/footer.php'); ?>
 

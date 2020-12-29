@@ -647,6 +647,7 @@ textarea {
     width:900px;
     overflow:auto;
     margin-left: 250px;
+    margin-bottom: 50px;
 }
 
 .contenedor-opiniones h2{
