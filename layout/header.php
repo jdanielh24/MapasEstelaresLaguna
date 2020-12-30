@@ -24,18 +24,24 @@ if (isset($_SESSION['user_id'])) {
 
             <a href="index.php">
                 <img src="img/LOGO_blanco.png" class="logo-comprimido" alt="Logo empresa">
-            </a>   
-
+            </a>  
+            
             <nav class="navegacion">
-                <a href="index.php">Home</a>
-                <a href="nosotros.php">Nosotros</a>
-                <a href="productos.php">Productos</a>
-                <a href="cart.php">Carrito</a>
-                <a href="contacto.php">Contacto</a>
-                <?php if (!empty($user)) : ?>
+                <ul>
+                    <li><a class="active" href="index.php">Home</a></li>
+                    <li><a href="nosotros.php">Nosotros</a></li>
+                    <li><a href="productos.php">Productos</a></li>
+                    <li><a href="cart.php">Carrito</a></li>
+                    <li><a href="contacto.php">Contacto</a></li>
+                    <li><?php if (!empty($user)) : ?>
                     <a href="#" ><?= $col2  ; ?></a>
-                <?php endif; ?>
+                    <?php endif; ?></li>
+                </ul>
+                <label id="icon"><i class="fas fa-bars"></i></label>
             </nav>
         </div>
     </div>
 </header>
+
+
+

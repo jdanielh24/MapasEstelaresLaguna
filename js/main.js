@@ -33,6 +33,8 @@ $(document).ready(function(){
         $('html, body').animate({scrollTop : 0}, 800);
     });
 
-
-   document.get
+    //-------------------------------
+    $('#icon').click(function(){
+        $('ul').toggleClass('show');
+    });
 });

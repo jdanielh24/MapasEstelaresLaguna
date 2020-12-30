@@ -21,6 +21,8 @@
         include ('layout/headerIndex.php');
     ?>
 
+    
+
     <main class="contenedor">
         <div class="cont-part1">
             <img src="img/Mapa1.png" alt="mapa 1" class="tamaño">
