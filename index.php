@@ -58,8 +58,8 @@
             <img src="img/Arrow-left.png" class="prev" alt="Prev">
 
             <div class="slider-inner">
-                <img src="img/belinda2.jpg" class="active">
-                <img src="img/lana2.jpg">
+                <img src="img/Belinda2.jpg" class="active">
+                <img src="img/Lana2.jpg">
                 <img src="img/cry2.jpg">
 
             </div>
