@@ -42,13 +42,14 @@ if (isset($_POST['c_password'])) {
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
+    <script> src="js/validar.js"</script>
 </head>
 
 <body>
 
     <section class="contenedor contenido-centrado seccion">
         <h2 class="fw-500 centrar-texto">Registro</h2>
-        <form action="signup.php" method="post">
+        <form action="signup.php" method="post" onsubmit="return validar();">
             <div class="contacto-form">
 
                 <fieldset>
