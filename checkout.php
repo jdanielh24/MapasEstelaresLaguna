@@ -99,6 +99,7 @@
                     <?php endif; ?>
 
                     <button class="boton boton-amarillo btn btn-block" type="submit">Finalizar orden</button>
+                    <button class="boton boton-amarillo btn btn-block"onclick="imprimir();">Imprimir</button>
 
                 </fieldset>
             </div>
@@ -109,6 +110,12 @@
     <?php include('layout/footer.php'); ?>
 
     <script src="js/jquery-3.3.1.min.js"></script>
+
+    <script type="text/javascript">
+        function imprimir(){
+            window.print();
+        }
+    </script>
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
