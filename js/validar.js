@@ -5,12 +5,13 @@ function validar(){
     passw = document.getElementById("c_password").value;
     passw2 = document.getElementById("c_password2").value;
 
-    expresion = /\w+@\.+[a-z]/;
+    expresion = /\w+@\w+\.+[a-z]/;
 
-    if(nombre==="" || email==="" || passw==="" || passw2===""){
+    if(nombre==null || nombre.length==0 || email==null || email.length==0 || passw==null || passw.length==0 
+        || passw2==null || passw2.length==0){
         alert("Todos los campos son obligatorios.");
         return false;
-    }else if(nombre.length > 200){
+    }else if(nombre.length > 2){
         alert("El nombre es muy largo");
         return false;
     }else if(email.length > 200){
