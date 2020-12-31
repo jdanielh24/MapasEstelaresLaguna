@@ -37,7 +37,7 @@
 
     <section class="contenedor contenido-centrado seccion">
         <h2 class="fw-500 centrar-texto">Detalles del pago</h2>
-        <form action="orden.php" method="post">
+        <form action="orden.php" method="post" id="formulario">
 
             <div class="contacto-form">
                 <fieldset>
@@ -109,6 +109,32 @@
     <?php include('layout/footer.php'); ?>
 
     <script src="js/jquery-3.3.1.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("formulario").addEventListener('submit', validarFormulario);
+        });
+
+        function validarFormulario(evento) {
+            evento.preventDefault();
+            var direccion, ciudad;
+            direccion = document.getElementById("c_direccion").value;
+            ciudad = document.getElementById("c_ciudad").value;
+
+            if (direccion == null || direccion.length == 0 || ciudad == null || ciudad.length == 0) {
+                alert("Todos los campos son obligatorios.");
+                return false;
+            } else if (direccion.length > 100) {
+                alert("La direccion es muy larga");
+                return false;
+            } else if (ciudad.length > 50) {
+                alert("El nombre de la ciudad es muy largo");
+                return false;
+            }
+
+            this.submit();
+        }
+    </script>
 
     <script>
         paypal.Buttons({
