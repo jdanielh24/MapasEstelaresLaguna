@@ -105,7 +105,7 @@ if (isset($_POST['c_password'])) {
                 passw2 == null || passw2.length == 0) {
                 alert("Todos los campos son obligatorios.");
                 return false;
-            } else if (nombre.length > 2) {
+            } else if (nombre.length > 200) {
                 alert("El nombre es muy largo");
                 return false;
             } else if (email.length > 200) {
