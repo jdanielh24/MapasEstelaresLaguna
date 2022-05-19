@@ -29,4 +29,4 @@ cual utiliza archivos de JS. Estos archivos están en admin/dashboard.
 
 
 LINK DE LA PAGINA:
-https://mapasestelareslaguna.000webhostapp.com/index.php
+https://mapasestelareslag.000webhostapp.com/index.php
